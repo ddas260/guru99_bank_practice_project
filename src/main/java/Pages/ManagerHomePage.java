@@ -1,6 +1,7 @@
 package Pages;
 
 import base.PageUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ManagerHomePage extends PageUtils {
@@ -8,5 +9,11 @@ public class ManagerHomePage extends PageUtils {
     public ManagerHomePage(WebDriver driver){
         super(driver);
         this.driver = driver;
+    }
+
+    By welcomeMeaageArea = By.tagName("marquee");
+
+    public String getWelcomeText(){
+        return findElement(welcomeMeaageArea).getText();
     }
 }
