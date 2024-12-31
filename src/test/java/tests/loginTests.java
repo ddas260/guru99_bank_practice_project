@@ -13,5 +13,8 @@ public class loginTests extends BaseTest {
         loginPage.login("mngr605446", "zYpunUv");
         ManagerHomePage managerHomePage = new ManagerHomePage(driver);
         Assert.assertEquals(managerHomePage.getWelcomeText(),"Welcome To Manager's Page of Guru99 Bank", "Welcome message not found");
+        Assert.assertEquals(managerHomePage.getTitle(), "Guru99 Bank Manager HomePage", "Title mismatch");
+
     }
+
 }

@@ -16,4 +16,8 @@ public class ManagerHomePage extends PageUtils {
     public String getWelcomeText(){
         return findElement(welcomeMeaageArea).getText();
     }
+
+    public String getTitle(){
+        return driver.getTitle();
+    }
 }
